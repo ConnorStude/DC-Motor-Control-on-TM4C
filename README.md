@@ -1,6 +1,5 @@
 # DC-Motor-Control-on-TM4C
 
-```
 Project 3: DC Motor Control
 Introduction to Robotics: CPEN 443
 
@@ -9,7 +8,7 @@ Introduction to Robotics: CPEN 443
 **Design Process**
 
 
-Figure 1: Flow Chart of workflow
+![Figure 1: Flow Chart of workflow](images/figure1.jpg)
 
 The process above shown in Figure 1 is a high level flow chart of the order in which each
 deliverable was worked on. All deliverables in green are working, while the controller in red is
@@ -48,7 +47,7 @@ Timer0A was used extensively in this project to produce an interrupt every 10ms.
 interrupt an ADC sampled the voltage of the motor every 100 μs and once 100 samples were
 gathered an average was taken. Once the voltage was finalized it was converted to an RPM and
 
-Figure 2: Voltmeter and Oscilliscope
+![Figure 2: Voltmeter and Oscilliscope](images/figure2.jpg)
 
 then reported to thread 2 so that it could be displayed. The PWM was then modified to bring the
 RPM to the desired speed from the keypad input.
@@ -91,13 +90,12 @@ sign is pressed, then a series of if statements
 null the remaining spots in the keypress array
 and translate that array to the target value.
 
-Figure 3: LCD Showing Input and Target Speed
+![Figure 3: LCD Showing Input and Target Speed](images/figure3.jpg)
 
-Figure 4: Motor Control System
+![Figure 4: Motor Control System](images/figure4.jpg)
 
 The function ASCII2Hex from Keypad.s translates the array for the target speed into an RPM
 value, then a series of if else statements make sure the target speed is in between 400 and 2400 or
-
 0. Finally, the function Hex2ASCII is used to turn that target speed back into an array of ASCII
 characters to be used in the 3rd thread for the LCD.
 
